@@ -1,0 +1,91 @@
+
+.calendarWrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.calendar {
+    width: 300px;
+    height: 340px;
+    padding: 40px 60px;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    color: #666666;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.headerDate {
+    display: flex;
+}
+
+.headerDateMonth {
+    margin: 0 8px 0 10px;
+}
+
+.arrowWrapper {
+    display: flex;
+}
+
+.arrow {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow img {
+    width: 50%;
+}
+
+.nextArrow {
+    margin: 0 10px 0 8px;
+}
+
+.month {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+}
+
+.monthHead {
+    color: #888888;
+    margin: 24px 0 16px;
+}
+
+.otherDays {
+    color: rgba(0,0,0,0.1);
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.currentAllDays {
+    color: #333333;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.daysWithTodo {
+    color: #CC0000;
+}
+
+.currentDay {
+    color: #ffffff;
+    background-color: #7bcbf9;
+    border-radius: 50%; 
+    padding: 10px 0;
+    cursor: pointer;
+}
