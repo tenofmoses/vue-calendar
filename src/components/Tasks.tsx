@@ -28,12 +28,22 @@ export default class Tasks extends VueComponent<Props> {
     }
 
     timeValidation(e:any) {
-        if (e.target.value) {
-            this.editText = true
-            this.todo.time = e.target.value
-        } else {
-            this.editText = false
-        }
+        this.asyncValidate(e.target.value).then(res => {
+            if (res) {
+                this.editText = true
+                this.todo.time = e.target.value
+            } else {
+                this.editText = false
+            } 
+        })
+    }
+
+    asyncValidate(value:string) {  
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                if (value) resolve(true)
+            }, 2000) 
+        })
     }
 
     changeText(e:any) {
